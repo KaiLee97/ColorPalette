@@ -11,6 +11,12 @@
 		E756FDB329F2529C0066BA0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDB229F2529C0066BA0C /* ContentView.swift */; };
 		E756FDB529F2529D0066BA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E756FDB429F2529D0066BA0C /* Assets.xcassets */; };
 		E756FDB829F2529D0066BA0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E756FDB729F2529D0066BA0C /* Preview Assets.xcassets */; };
+		E756FDC429F2534E0066BA0C /* ColorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDC329F2534E0066BA0C /* ColorSection.swift */; };
+		E756FDC629F2568C0066BA0C /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDC529F2568C0066BA0C /* ColorRGB.swift */; };
+		E756FDC829F2580B0066BA0C /* ColorMindAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDC729F2580B0066BA0C /* ColorMindAPIManager.swift */; };
+		E756FDCA29F25C920066BA0C /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDC929F25C920066BA0C /* ColorPaletteView.swift */; };
+		E756FDCC29F25F200066BA0C /* ColorPaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756FDCB29F25F200066BA0C /* ColorPaletteViewModel.swift */; };
+		E756FDCF29F263C60066BA0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E756FDCE29F263C60066BA0C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		E756FDB229F2529C0066BA0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E756FDB429F2529D0066BA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E756FDB729F2529D0066BA0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E756FDC329F2534E0066BA0C /* ColorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSection.swift; sourceTree = "<group>"; };
+		E756FDC529F2568C0066BA0C /* ColorRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
+		E756FDC729F2580B0066BA0C /* ColorMindAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMindAPIManager.swift; sourceTree = "<group>"; };
+		E756FDC929F25C920066BA0C /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+		E756FDCB29F25F200066BA0C /* ColorPaletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewModel.swift; sourceTree = "<group>"; };
+		E756FDD229F269410066BA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E756FDCF29F263C60066BA0C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,12 @@
 		E756FDAF29F2529C0066BA0C /* ColorPalette */ = {
 			isa = PBXGroup;
 			children = (
+				E756FDD229F269410066BA0C /* Info.plist */,
+				E756FDC229F253080066BA0C /* Components */,
+				E756FDC129F253020066BA0C /* ViewModels */,
+				E756FDC029F252FB0066BA0C /* Views */,
+				E756FDBF29F252DF0066BA0C /* Managers */,
+				E756FDBE29F252D60066BA0C /* Models */,
 				E756FDB029F2529C0066BA0C /* ColorPaletteApp.swift */,
 				E756FDB229F2529C0066BA0C /* ContentView.swift */,
 				E756FDB429F2529D0066BA0C /* Assets.xcassets */,
@@ -65,6 +84,46 @@
 				E756FDB729F2529D0066BA0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E756FDBE29F252D60066BA0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E756FDC529F2568C0066BA0C /* ColorRGB.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E756FDBF29F252DF0066BA0C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E756FDC729F2580B0066BA0C /* ColorMindAPIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E756FDC029F252FB0066BA0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E756FDC929F25C920066BA0C /* ColorPaletteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E756FDC129F253020066BA0C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E756FDCB29F25F200066BA0C /* ColorPaletteViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E756FDC229F253080066BA0C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E756FDC329F2534E0066BA0C /* ColorSection.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +142,9 @@
 			dependencies = (
 			);
 			name = ColorPalette;
+			packageProductDependencies = (
+				E756FDCE29F263C60066BA0C /* Alamofire */,
+			);
 			productName = ColorPalette;
 			productReference = E756FDAD29F2529C0066BA0C /* ColorPalette.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +173,9 @@
 				Base,
 			);
 			mainGroup = E756FDA429F2529C0066BA0C;
+			packageReferences = (
+				E756FDCD29F263C50066BA0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E756FDAE29F2529C0066BA0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E756FDCC29F25F200066BA0C /* ColorPaletteViewModel.swift in Sources */,
+				E756FDC829F2580B0066BA0C /* ColorMindAPIManager.swift in Sources */,
+				E756FDCA29F25C920066BA0C /* ColorPaletteView.swift in Sources */,
 				E756FDB329F2529C0066BA0C /* ContentView.swift in Sources */,
+				E756FDC429F2534E0066BA0C /* ColorSection.swift in Sources */,
 				E756FDB129F2529C0066BA0C /* ColorPaletteApp.swift in Sources */,
+				E756FDC629F2568C0066BA0C /* ColorRGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +340,7 @@
 				DEVELOPMENT_TEAM = Z66KDY865Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorPalette/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +370,7 @@
 				DEVELOPMENT_TEAM = Z66KDY865Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorPalette/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E756FDCD29F263C50066BA0C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E756FDCE29F263C60066BA0C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E756FDCD29F263C50066BA0C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E756FDA529F2529C0066BA0C /* Project object */;
 }
